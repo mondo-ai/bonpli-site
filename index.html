@@ -37,7 +37,8 @@ li { margin-bottom: .45rem; }
 a { color: #1a3a5c; text-underline-offset: 2px; }
 a:focus-visible, .skip:focus { outline: 3px solid #8a5f10; outline-offset: 2px; }
 strong { font-weight: 700; }
-.extrait { border: 1px solid #d9dee5; border-radius: 6px; padding: .9rem 1rem .4rem; background: #fafbfc; font-size: .95rem; line-height: 1.5; overflow-wrap: anywhere; }
+.extrait { border: 1px solid #d9dee5; border-radius: 6px; padding: .9rem 1rem .4rem; background: #fafbfc; font-size: .95rem; line-height: 1.5; overflow-wrap: break-word; }
+.nb { white-space: nowrap; }
 .extrait h3 { margin: 1rem 0 .45rem; }
 .extrait .soon { color: #b3261e; }
 .extrait .h70 { color: #1d7a3e; }
@@ -69,60 +70,31 @@ footer h2 { font-size: 1.05rem; }
 <header>
   <p class="marque">Bonpli</p>
   <h1>Chaque lundi, un email avec les appels d'offres publics informatiques notés pour votre entreprise.</h1>
-  <p class="accroche">Bonpli lit chaque appel d'offres informatique paru au BOAMP, le Bulletin officiel des annonces des marchés publics. Chacun reçoit une note sur 100 selon votre métier.</p>
+  <p class="accroche">Bonpli lit chaque appel d'offres informatique paru au BOAMP, le Bulletin officiel des annonces des marchés publics. Chaque avis reçoit une note sur 100 selon votre métier.</p>
   <div class="repere">
     <p>Pour les entreprises de services du numérique (ESN) et les éditeurs de logiciels, en France.</p>
-    <p>Essai gratuit de 14 jours, sans carte bancaire.</p>
-    <p>Puis 100 € HT par mois pour les 10 premiers clients, 150 € HT par mois à partir du 11e.</p>
+    <p>Essai gratuit de 14 jours, sans carte bancaire. Puis 100 € HT par mois, par entreprise, pour les 10 premiers clients. Détail du prix plus bas.</p>
+    <p>Pour essayer : répondez « ok » à l'email reçu, ou écrivez à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a>.</p>
   </div>
 </header>
 
 <main id="contenu">
 <section id="qui">
   <h2>Qui est derrière</h2>
-  <p>Armand Verdi, fondateur de Bonpli. J'ai construit l'outil, j'écris les emails et je réponds moi-même, sous deux jours ouvrés. Mon métier : ingénieur IA.</p>
+  <p>Armand Verdi, fondateur de Bonpli. Ingénieur IA, j'ai construit l'outil. J'écris les emails et je réponds moi-même, sous deux jours ouvrés.</p>
 </section>
 
 <section id="lundi">
   <h2>Ce que vous recevez le lundi</h2>
-  <p>Un seul email. Pas de tableau de bord, pas d'application, pas d'alerte en temps réel.</p>
+  <p>Un seul email : la sélection de la semaine. Pas de tableau de bord, pas d'application, pas d'alerte en temps réel.</p>
   <ul>
     <li>À regarder : les appels d'offres notés 70 ou plus sur 100.</li>
     <li>À examiner : ceux notés de 40 à 69, avec ce qui peut coincer.</li>
     <li>Clôture proche : ceux dont la date limite tombe dans 14 jours ou moins.</li>
-    <li>Encore ouverts : ceux déjà envoyés un lundi précédent, tant qu'on peut y répondre.</li>
+    <li>Encore ouverts : ceux déjà signalés un lundi précédent, tant que leur date limite n'est pas passée.</li>
     <li>Écartés : les autres, en une ligne chacun, avec la raison.</li>
   </ul>
   <p>Pour chaque appel d'offres retenu : le résumé, les points clés (calendrier, certifications, lots, lieu), la note justifiée et le lien vers l'avis complet.</p>
-</section>
-
-<section id="extrait">
-  <h2>Un extrait réel</h2>
-  <p class="note">Sélection du lundi 7 septembre 2026 pour une entreprise d'infogérance, cloud et cybersécurité en région PACA (Provence-Alpes-Côte d'Azur). Le « vous » de l'extrait, c'est elle. Données publiques du BOAMP à jour au 7 septembre 2026, textes tels que produits par l'outil.</p>
-  <div class="extrait">
-    <p>Depuis votre sélection du 31 août, mon outil a lu 28 appels d'offres publiés au BOAMP dans le périmètre informatique (parus du 1er septembre au 7 septembre) : 0 à regarder, 9 à examiner, 19 écartés.</p>
-    <h3 class="soon">Clôture proche, à décider cette semaine</h3>
-    <p><span class="n70">92/100</span> · <a href="https://www.boamp.fr/pages/avis/?q=idweb:26-81104">Centre de support informatique</a> · Mairie de Cannes (06)<br>
-    <span class="meta">limite offres lun. 21/09/2026 10 h (J-14) · 20 000 € HT (estimé) · signalé le 24/08 · avis 26-81104</span></p>
-    <h3 class="h70">À regarder <span class="legende">(note 70 ou plus)</span> : aucun nouveau cette semaine.</h3>
-    <h3 class="h40">À examiner <span class="legende">(note 40 à 69)</span> : 9, dont</h3>
-    <p><span class="n40">55/100</span> · <a href="https://www.boamp.fr/pages/avis/?q=idweb:26-86700">Maintenance, exploitation et assistance technique du parc et du système d'information de la communauté de communes du Val de l'Eyre avec intégration de nouveaux équipements</a> · Cté de Cnes du Val de l'Eyre (33)<br>
-    <span class="meta">limite offres ven. 16/10/2026 12 h · procédure ouverte · avis 26-86700</span><br>
-    Pourquoi 55 : Vous répondriez sur la maintenance et l'assistance technique du système d'information, montant non renseigné, en Gironde, à examiner. Mais l'exécution se tient sur les sites de Belin-Béliet, Le Barp et Salles, hors de votre zone de déplacement.</p>
-    <p><span class="n40">52/100</span> · <a href="https://www.boamp.fr/pages/avis/?q=idweb:26-84746">Marché public d'acquisition, mise en œuvre et maintenance d'infrastructure de serveurs virtualisés</a> · Commune Saint Philbert de Grand Lieu (44)<br>
-    <span class="meta">limite offres mer. 14/10/2026 12 h · 90 000 € (estimé) · procédure ouverte · fournitures · avis 26-84746</span><br>
-    Pourquoi 52 : Vous visez la fourniture, mise en œuvre et maintenance de serveurs virtualisés avec infogérance, 90 000 € (estimé), à Saint-Philbert-de-Grand-Lieu, à examiner. Mais deux visites sont prévues les 22 et 24 septembre 2026 en Loire-Atlantique, loin de votre implantation en PACA.</p>
-    <h3 class="h15">Écartés : 19 lus, non retenus, dont</h3>
-    <p class="ecarte">25 · Mise à jour, renouvellement et acquisition de produits AUTODESK et prestations associées · Rennes Métropole (35) · Mais la revente de produits Autodesk relève d'un partenariat éditeur, avec accord-cadre à opérateur unique pour Rennes Métropole et la Ville de Rennes. · avis 26-85709</p>
-    <p class="ecarte">18 · Logiciel Archives et prestations · Communauté de communes Le Gresivaudan (38) · Mais le marché relève d'une offre d'éditeur sur 48 mois, sans lot d'infrastructure ni de sécurité. · avis 26-86645</p>
-  </div>
-  <p class="note">« Signalé le 24/08 » : cet appel d'offres avait déjà été envoyé le lundi 24 août. Il reste listé tant qu'on peut y répondre.</p>
-</section>
-
-<section id="note">
-  <h2>Comment l'outil note</h2>
-  <p>L'outil lit chaque avis, le résume et le note selon votre métier, lu sur votre site et dans le registre des entreprises. La note tient compte de la taille de votre entreprise, du montant du marché, des références exigées et de votre région. Un marché trop gros, trop loin, ou pas votre métier est noté bas.</p>
-  <p>Une note peut se tromper : le tri est automatisé, personne ne le relit avant l'envoi. C'est pour ça que la raison est écrite à chaque fois, et que le lien vers l'avis est toujours là. Vous corrigez votre profil (métier, certifications, régions) en répondant à un email, en une ligne. Je l'applique moi-même, et la correction compte dès le lundi suivant.</p>
 </section>
 
 <section id="source">
@@ -130,9 +102,39 @@ footer h2 { font-size: 1.05rem; }
   <p>Le BOAMP, rien d'autre. Ni le Journal officiel de l'Union européenne (JOUE), ni les plateformes d'acheteurs, ni les marchés privés. Un appel d'offres absent du BOAMP n'apparaît pas dans votre sélection.</p>
 </section>
 
+<section id="extrait">
+  <h2>Un extrait réel</h2>
+  <p class="note">Sélection du lundi 7 septembre 2026 pour une entreprise d'infogérance, cloud et cybersécurité en région PACA (Provence-Alpes-Côte d'Azur). Dans l'extrait, « vous » désigne cette entreprise. Données publiques du BOAMP à cette date, textes tels que produits par l'outil. Extrait abrégé : les fiches avec résumé et points clés, en annexe de l'email, ne sont pas reprises ici. Cette semaine-là, aucun nouvel avis n'atteignait 70 : le 92/100 de Cannes était déjà dans la sélection du lundi 24 août 2026 (« signalé le 24/08 »). Il y reste tant que sa date limite n'est pas passée.</p>
+  <div class="extrait">
+    <p class="meta">28 avis lus depuis le 31 août · 9 à examiner · 3 clôtures sous 14 jours, la 1re le 14/09</p>
+    <p><strong>Bonpli</strong> · lundi 7 septembre</p>
+    <p>Depuis votre sélection du 31 août, mon outil a lu 28 appels d'offres publiés au BOAMP dans le périmètre informatique (parus du 1er septembre au 7 septembre) : 0 à regarder, 9 à examiner, 19 écartés.</p>
+    <h3 class="soon">Clôture proche, à décider cette semaine</h3>
+    <p><span class="n70">92/100</span> · <a href="https://www.boamp.fr/pages/avis/?q=idweb:26-81104">Centre de support informatique</a> · Mairie de Cannes (06)<br>
+    <span class="meta">limite offres lun. 21/09/2026 10 h (J-14) · 20 000 € HT (estimé) · signalé le 24/08 · <span class="nb">avis 26-81104</span></span></p>
+    <h3 class="h70">À regarder <span class="legende">(note 70 ou plus)</span> : aucun nouveau cette semaine.</h3>
+    <h3 class="h40">À examiner <span class="legende">(note 40 à 69)</span> : 9, dont</h3>
+    <p><span class="n40">55/100</span> · <a href="https://www.boamp.fr/pages/avis/?q=idweb:26-86700">Maintenance, exploitation et assistance technique du parc et du système d'information de la communauté de communes du Val de l'Eyre avec intégration de nouveaux équipements</a> · Cté de Cnes du Val de l'Eyre (33)<br>
+    <span class="meta">limite offres ven. 16/10/2026 12 h · procédure ouverte · <span class="nb">avis 26-86700</span></span><br>
+    Pourquoi 55 : Vous répondriez sur la maintenance et l'assistance technique du système d'information, montant non renseigné, en Gironde, à examiner. Mais l'exécution se tient sur les sites de Belin-Béliet, Le Barp et Salles, hors de votre zone de déplacement.</p>
+    <p><span class="n40">52/100</span> · <a href="https://www.boamp.fr/pages/avis/?q=idweb:26-84746">Marché public d'acquisition, mise en œuvre et maintenance d'infrastructure de serveurs virtualisés</a> · Commune Saint Philbert de Grand Lieu (44)<br>
+    <span class="meta">limite offres mer. 14/10/2026 12 h · 90 000 € (estimé) · procédure ouverte · fournitures · <span class="nb">avis 26-84746</span></span><br>
+    Pourquoi 52 : Vous visez la fourniture, mise en œuvre et maintenance de serveurs virtualisés avec infogérance, 90 000 € (estimé), à Saint-Philbert-de-Grand-Lieu, à examiner. Mais deux visites sont prévues les 22 et 24 septembre 2026 en Loire-Atlantique, loin de votre implantation en PACA.</p>
+    <h3 class="h15">Écartés <span class="legende">(notés 15 à 39)</span> : 19 lus, non retenus, dont</h3>
+    <p class="ecarte">25 · Mise à jour, renouvellement et acquisition de produits AUTODESK et prestations associées · Rennes Métropole (35) · Mais la revente de produits Autodesk relève d'un partenariat éditeur, avec accord-cadre à opérateur unique pour Rennes Métropole et la Ville de Rennes. · <span class="nb">avis 26-85709</span></p>
+    <p class="ecarte">18 · Logiciel Archives et prestations · Communauté de communes Le Gresivaudan (38) · Mais le marché relève d'une offre d'éditeur sur 48 mois, sans lot d'infrastructure ni de sécurité. · <span class="nb">avis 26-86645</span></p>
+  </div>
+</section>
+
+<section id="note">
+  <h2>Comment l'outil note</h2>
+  <p>L'outil lit votre métier sur votre site et dans l'annuaire officiel des entreprises. La note tient compte de la taille de votre entreprise, du montant du marché, des références exigées et de votre région. Un marché trop gros ou hors de votre métier est noté bas. Un marché loin de chez vous aussi, sauf s'il se fait à distance.</p>
+  <p>Une note peut se tromper : le tri est automatisé, personne ne le relit avant l'envoi. C'est pour ça que la raison est écrite à chaque fois, et que le lien vers l'avis est toujours là. Et si l'outil vous a mal compris, corrigez votre profil (métier, certifications, régions) en répondant à un email, en une ligne. Je fais la correction, et elle compte dès le lundi suivant.</p>
+</section>
+
 <section id="essai">
   <h2>L'essai</h2>
-  <p>14 jours gratuits, sans carte bancaire : aucun prélèvement possible, rien ne vous engage. L'essai démarre dès que vous répondez « ok » à mon email. Le jour même, un message de bienvenue vous dit ce que l'outil a compris de votre métier, à corriger en une ligne. Puis la première sélection, et une nouvelle chaque lundi. Trois jours avant la fin, je vous demande si vous voulez continuer. Sinon, tout s'arrête tout seul à la fin des 14 jours, avec un dernier message de ma part.</p>
+  <p>14 jours gratuits, sans carte bancaire : aucun prélèvement possible, rien ne vous engage. L'essai démarre dès que vous répondez « ok » à mon email. Le jour même, un message de bienvenue dit ce que l'outil a compris de votre métier et de votre région, à corriger en une ligne. Puis la première sélection, et une nouvelle chaque lundi. Trois jours avant la fin, je vous demande si vous voulez continuer. Sinon, tout s'arrête tout seul à la fin des 14 jours, avec un dernier message de ma part.</p>
 </section>
 
 <section id="prix">
@@ -140,14 +142,14 @@ footer h2 { font-size: 1.05rem; }
   <ul class="prix">
     <li><strong>100 € HT par mois</strong> pour les 10 premiers clients. Vous gardez ce tarif tant que vous restez abonné.</li>
     <li><strong>150 € HT par mois</strong> à partir du 11e client.</li>
-    <li><strong>1 000 € HT par an</strong>, offre annuelle.</li>
+    <li><strong>1 000 € HT par an.</strong></li>
   </ul>
-  <p>Le tarif est par entreprise, pas par personne : plusieurs adresses reçoivent la sélection sans supplément. Vous résiliez quand vous voulez, en me répondant.</p>
+  <p>Le tarif est par entreprise, pas par personne : plusieurs adresses chez vous reçoivent la sélection, sans supplément. Vous résiliez quand vous voulez, en me répondant.</p>
 </section>
 
 <section id="demarrer">
   <h2>Pour démarrer</h2>
-  <p>Si vous avez reçu un email de ma part, répondez « ok » : l'essai démarre le jour même. Pas d'email ? Écrivez-moi à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a> avec le nom de votre entreprise : je vous réponds moi-même sous deux jours ouvrés.</p>
+  <p>Si vous avez reçu un email de ma part, répondez « ok » : l'essai démarre le jour même. Pas d'email ? Écrivez-moi à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a> avec le nom de votre entreprise : je vous réponds sous deux jours ouvrés.</p>
 </section>
 </main>
 
@@ -156,16 +158,17 @@ footer h2 { font-size: 1.05rem; }
   <h2>Mentions légales</h2>
   <p>Éditeur : Armand Verdi, entrepreneur individuel, SIREN 992 118 224, RCS Nice, Cap-d'Ail (06). Directeur de la publication : Armand Verdi. Contact : <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a>.</p>
   <p>Hébergement : GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis.</p>
-  <p>Appels d'offres : avis publiés au BOAMP (<a href="https://www.boamp.fr">boamp.fr</a>) par la DILA, la Direction de l'information légale et administrative, réutilisés sous <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">Licence Ouverte 2.0</a>, la licence de l'État qui autorise la réutilisation des données publiques en citant leur source. Résumés, points clés et notes : Bonpli, par analyse automatisée. Bonpli n'a aucun lien avec la DILA et aucune caution officielle.</p>
+  <p>Appels d'offres : avis publiés au BOAMP (<a href="https://www.boamp.fr">boamp.fr</a>) par la DILA, la Direction de l'information légale et administrative. Ils sont réutilisés sous <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">Licence Ouverte 2.0</a>, la licence de l'État qui autorise la réutilisation des données publiques en citant leur source. Résumés, points clés et notes : Bonpli, par analyse automatisée. Bonpli n'a aucun lien avec la DILA et aucune caution officielle.</p>
 </section>
 
 <section id="confidentialite">
   <h2>Confidentialité</h2>
   <p><strong>Ce site.</strong> Aucun cookie, aucun script tiers, aucune mesure d'audience, aucun formulaire. L'hébergeur, GitHub, enregistre l'adresse IP des visiteurs pour la sécurité de son service.</p>
-  <p><strong>Si vous avez reçu un email de prospection.</strong> Vos coordonnées viennent de deux sources publiques. L'annuaire officiel des entreprises donne le nom de votre entreprise et ses données d'immatriculation. Le site web officiel de votre entreprise donne une adresse email professionnelle de contact et votre spécialité. Rien d'autre : aucune donnée privée, aucun profil social. J'ai le nom de votre entreprise, son SIREN, son activité, son effectif, sa localisation, une adresse email de contact. Un prénom, si votre site le publie. Votre spécialité telle qu'elle apparaît sur votre site. La liste de mes emails et de vos réponses. Je les utilise pour vous proposer ce service, en rapport avec votre activité, avec au plus deux relances. Base légale : mon intérêt légitime (article 6.1.f du RGPD, le règlement européen sur les données personnelles). Conservation : trois ans après le dernier contact sans réponse, puis suppression. Après un « stop », seule votre adresse est gardée dans une liste d'opposition, pour ne plus vous écrire.</p>
-  <p><strong>Vos droits.</strong> Opposition : répondez « stop » à n'importe lequel de mes emails, c'est immédiat et définitif. Accès, rectification, effacement, limitation : écrivez à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a>. Je réponds moi-même sous deux jours ouvrés. Pour une demande d'accès, j'envoie la copie complète de vos données sous un mois au plus tard. Vous pouvez aussi déposer une réclamation auprès de la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>), l'autorité française de protection des données.</p>
-  <p><strong>Qui voit quoi.</strong> Les emails partent et arrivent par Google Workspace (Google, États-Unis, transfert encadré par les clauses contractuelles types de l'Union européenne). L'analyse des avis et des sites web passe par des services d'Anthropic et d'OpenAI (États-Unis, même encadrement). Ils reçoivent le contenu public de votre site et le texte des avis de marchés, jamais mon fichier de contacts. Le service tourne sur un serveur OVHcloud.</p>
-  <p><strong>Si vous êtes client.</strong> Je garde le nom de votre entreprise, les adresses qui reçoivent la sélection et votre profil (métier, certifications, régions). Je les garde le temps de l'essai ou de l'abonnement. Base légale : le contrat. Mêmes droits, même adresse.</p>
+  <p><strong>Si vous avez reçu un email de prospection.</strong> Vos coordonnées viennent de deux sources publiques. L'annuaire officiel des entreprises donne le nom de votre entreprise et ses données d'immatriculation : SIREN, activité, effectif, localisation. Votre site web officiel donne une adresse email professionnelle de contact, votre spécialité telle qu'elle y apparaît, et un prénom quand le site l'affiche. Rien d'autre : aucune donnée privée, aucun profil social. J'y ajoute la liste de mes emails et de vos réponses. Je m'en sers pour vous proposer ce service, lié à votre activité, avec au plus deux relances.</p>
+  <p>Base légale : mon intérêt légitime (article 6.1.f du RGPD, le règlement européen sur les données personnelles). Conservation : trois ans après le dernier contact sans réponse, puis suppression. Après un « stop », seule votre adresse est gardée dans une liste d'opposition, pour ne plus vous écrire.</p>
+  <p><strong>Vos droits.</strong> Opposition : répondez « stop » à n'importe lequel de mes emails, c'est immédiat et définitif. Accès, rectification, effacement, limitation : écrivez à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a>. Je réponds sous deux jours ouvrés. Pour une demande d'accès, j'envoie la copie complète de vos données sous un mois au plus tard. Vous pouvez aussi déposer une réclamation auprès de la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>), l'autorité française de protection des données.</p>
+  <p><strong>Qui voit quoi.</strong> Les emails partent et arrivent par Google Workspace (Google, États-Unis, transfert encadré par les clauses contractuelles types de l'Union européenne). L'analyse des avis et des sites web passe par des services d'Anthropic et d'OpenAI (États-Unis, même encadrement). Ils reçoivent le contenu public de votre site et le texte des avis de marchés. Je ne leur transmets ni votre adresse email ni votre prénom. Le service tourne sur un serveur OVHcloud.</p>
+  <p><strong>Si vous êtes client.</strong> Je garde le nom de votre entreprise, les adresses qui reçoivent la sélection et votre profil (métier, certifications, régions). Pas plus longtemps que l'essai ou l'abonnement. Base légale : le contrat. Mêmes droits, même adresse.</p>
 </section>
 </footer>
 </div>
