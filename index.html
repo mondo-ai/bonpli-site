@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bonpli, la veille des appels d'offres publics informatiques</title>
-<meta name="description" content="Chaque lundi, un email avec les appels d'offres publics informatiques du BOAMP, notés pour votre entreprise. Pour les ESN et les éditeurs de logiciels. Essai gratuit de 14 jours, sans carte bancaire.">
+<title>Bonpli, appels d'offres publics informatiques, Armand Verdi</title>
+<meta name="description" content="Les avis informatiques du BOAMP, lus et notés pour votre métier. Un email le lundi, pour les ESN et les éditeurs. Essai gratuit de deux semaines, sans carte.">
 <link rel="canonical" href="https://bonpli.fr/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#1a3a5c">
@@ -12,8 +12,8 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://bonpli.fr/">
 <meta property="og:site_name" content="Bonpli">
-<meta property="og:title" content="Bonpli, la veille des appels d'offres publics informatiques">
-<meta property="og:description" content="Chaque lundi, un email avec les appels d'offres publics informatiques du BOAMP, notés pour votre entreprise. Essai gratuit de 14 jours, sans carte bancaire.">
+<meta property="og:title" content="Bonpli, appels d'offres publics informatiques, Armand Verdi">
+<meta property="og:description" content="Les avis informatiques du BOAMP, lus et notés pour votre métier. Un email le lundi, pour les ESN et les éditeurs. Essai gratuit de deux semaines, sans carte.">
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -27,7 +27,9 @@ body { margin: 0; background: #ffffff; color: #222222; font-family: -apple-syste
 header { padding-top: 1.4rem; }
 .marque { font-weight: 700; color: #1a3a5c; font-size: 1.15rem; letter-spacing: .02em; margin: 0 0 1.3rem; }
 h1 { font-size: 1.6rem; line-height: 1.25; color: #1a3a5c; margin: 0 0 1rem; font-weight: 700; }
-.accroche { font-size: 1.1rem; }
+/* 22/09 : l'accroche est du corps de texte, pas un chapeau. */
+.accroche { font-size: 1.0625rem; }
+.identite { color: #555555; font-size: .9rem; margin: 0 0 1.1rem; }
 .repere { margin: 1rem 0 0; padding: .8rem 1rem; border-left: 4px solid #1a3a5c; background: #f4f6f9; }
 .repere p { margin: 0 0 .35rem; }
 .repere p:last-child { margin-bottom: 0; }
@@ -61,6 +63,16 @@ footer h2 { font-size: 1.05rem; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.3rem; }
 }
+@media print {
+  .skip { display: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; word-break: break-all; }
+  a[href^="mailto:"]::after { content: " (" attr(href) ")"; font-size: .85em; }
+  section, .repere, .extrait, li { break-inside: avoid; page-break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  footer, #mentions-legales, #confidentialite { display: block; }
+  body { font-size: 11pt; color: #000000; }
+  .page { max-width: none; padding: 0; }
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Bonpli","url":"https://bonpli.fr/","email":"armand@bonpli.fr","founder":{"@type":"Person","name":"Armand Verdi"},"areaServed":"FR","description":"Veille hebdomadaire des appels d'offres publics informatiques publiés au BOAMP, notés pour les ESN et les éditeurs de logiciels."}
@@ -71,44 +83,29 @@ footer h2 { font-size: 1.05rem; }
 <div class="page">
 <header>
   <p class="marque">Bonpli</p>
-  <h1>Chaque lundi, un email avec les appels d'offres publics informatiques notés pour votre entreprise.</h1>
-  <p class="accroche">Bonpli lit chaque appel d'offres informatique paru au BOAMP, le Bulletin officiel des annonces des marchés publics. Chaque avis reçoit une note sur 100 selon votre métier.</p>
+  <p class="identite">Armand Verdi EI · SIREN 992 118 224 · RCS Nice</p>
+  <h1>Le BOAMP est public. Mon outil y lit chaque avis informatique.</h1>
+  <p class="accroche">Chaque avis reçoit une note sur 100 selon votre métier. Ceux qui sont écartés arrivent aussi, en une ligne. Certaines semaines, rien n'atteint 70, et l'email du lundi le dit.</p>
+  <p class="accroche">Vous savez ce qui a paru au BOAMP en informatique, sans avoir tout lu.</p>
   <div class="repere">
-    <p>Pour les entreprises de services du numérique (ESN) et les éditeurs de logiciels, en France.</p>
-    <p>Essai gratuit de 14 jours, sans carte bancaire. Puis 100 € HT par mois, par entreprise, pour les 10 premiers clients. Détail du prix plus bas.</p>
-    <p>Pour essayer : répondez « ok » à mon email, si vous en avez reçu un, ou écrivez à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a>.</p>
+    <p>Deux semaines gratuites, sans carte bancaire. Puis 100 € HT par mois pour mes 10 premiers abonnements payants, 150 € HT ensuite. Ou 1 000 € HT l'an, pour ces 10 premiers.</p>
+    <p>Pour démarrer, écrivez à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a> avec le nom de votre entreprise. Ou répondez « ok » si je vous ai écrit.</p>
+    <p>Pour les entreprises de services du numérique (ESN) et les éditeurs de logiciels, en France. Une source unique, le BOAMP, le Bulletin officiel des annonces des marchés publics.</p>
   </div>
 </header>
 
 <main id="contenu">
 <section id="qui">
   <h2>Qui est derrière</h2>
-  <p>Armand Verdi, fondateur de Bonpli. Ingénieur IA, j'ai construit l'outil. J'écris les emails et je réponds moi-même, sous deux jours ouvrés.</p>
-</section>
-
-<section id="lundi">
-  <h2>Ce que vous recevez le lundi</h2>
-  <p>Un seul email : la sélection de la semaine. Pas de tableau de bord, pas d'application, pas d'alerte en temps réel.</p>
-  <ul>
-    <li>À regarder : les appels d'offres notés 70 ou plus sur 100.</li>
-    <li>À examiner : ceux notés de 40 à 69, avec ce qui peut coincer.</li>
-    <li>Clôture proche : ceux dont la date limite tombe dans 14 jours ou moins.</li>
-    <li>Encore ouverts : ceux déjà signalés un lundi précédent, notés 70 ou plus, tant que leur date limite est à sept jours ou plus.</li>
-    <li>Écartés : les autres, en une ligne chacun, avec la raison.</li>
-  </ul>
-  <p>Pour chaque appel d'offres retenu : le résumé, les points clés (calendrier, certifications, lots, lieu), la note justifiée et le lien vers l'avis complet.</p>
-</section>
-
-<section id="source">
-  <h2>Une seule source</h2>
-  <p>Le BOAMP, rien d'autre. Il inclut les avis français qui paraissent aussi au Journal officiel de l'Union européenne (JOUE) en raison de leur montant. Je ne couvre ni les plateformes d'acheteurs, ni les marchés privés. Un appel d'offres absent du BOAMP n'apparaît pas dans votre sélection.</p>
+  <p>Armand Verdi, fondateur de Bonpli. Ingénieur IA, j'ai construit l'outil. J'écris les emails et je réponds moi-même, sous deux jours ouvrés. Le tri, lui, tourne sans moi, et une note peut se tromper.</p>
+  <p>Bonpli est mon nom commercial, et ce que vous lisez ici se vérifie ailleurs. L'immatriculation, au registre du commerce. Les appels d'offres retenus, sur boamp.fr. Si je vous ai écrit, vos coordonnées viennent de votre site et de l'annuaire officiel des entreprises. Un « stop » en réponse, et je n'écris plus.</p>
 </section>
 
 <section id="extrait">
   <h2>Un extrait réel</h2>
-  <p class="note">Sélection du lundi 7 septembre 2026 pour une entreprise d'infogérance, cloud et cybersécurité en région PACA (Provence-Alpes-Côte d'Azur). Données publiques du BOAMP à cette date, textes tels que produits par l'outil.</p>
   <div class="extrait">
-    <p class="meta">28 avis lus depuis le 31 août · 9 à examiner · 3 clôtures sous 14 jours, la 1re le 14/09, dont 1 reprise ici</p>
+    <p>Sélection du lundi 7 septembre 2026 pour une entreprise d'infogérance, cloud et cybersécurité en région PACA (Provence-Alpes-Côte d'Azur). Données publiques du BOAMP à cette date, textes tels que produits par l'outil.</p>
+    <p>Cette semaine-là, l'outil a lu 28 avis, en a retenu 9 à examiner, et aucun n'atteignait 70.</p>
     <p><strong>Bonpli</strong> · lundi 7 septembre</p>
     <p>Depuis votre sélection du 31 août, mon outil a lu 28 appels d'offres publiés au BOAMP dans le périmètre informatique (parus du 1er septembre au 7 septembre) : 0 à regarder, 9 à examiner, 19 écartés.</p>
     <h3 class="soon">Clôture proche, à décider cette semaine</h3>
@@ -126,7 +123,24 @@ footer h2 { font-size: 1.05rem; }
     <p class="ecarte">25 · Mise à jour, renouvellement et acquisition de produits AUTODESK et prestations associées · Rennes Métropole (35) · Mais la revente de produits Autodesk relève d'un partenariat éditeur, avec accord-cadre à opérateur unique pour Rennes Métropole et la Ville de Rennes. · <span class="nb">avis 26-85709</span></p>
     <p class="ecarte">18 · Logiciel Archives et prestations · Communauté de communes Le Gresivaudan (38) · Mais le marché relève d'une offre d'éditeur sur 48 mois, sans lot d'infrastructure ni de sécurité. · <span class="nb">avis 26-86645</span></p>
   </div>
-  <p class="note">Dans l'extrait, « vous » désigne cette entreprise. Extrait abrégé : les fiches en annexe de l'email (résumé, points clés) ne sont pas reprises. Aucun nouvel avis n'atteignait 70 cette semaine-là. Le 92/100 de Cannes vient de la sélection du 24 août 2026, d'où « signalé le 24/08 ». Il y reste tant que sa date limite est à sept jours ou plus.</p>
+  <p class="note">Dans l'extrait, « vous » désigne cette entreprise. Extrait abrégé : les fiches en annexe de l'email (résumé, points clés) ne sont pas reprises. Aucun nouvel avis n'atteignait 70 cette semaine-là. Le 92/100 de Cannes vient de la sélection du 24 août 2026, d'où « signalé le 24/08 ». Il y reste tant que sa date limite est à sept jours ou plus. La forme de l'email a changé depuis : les avis à décider tiennent aujourd'hui dans une seule liste, par date.</p>
+</section>
+
+<section id="lundi">
+  <h2>Ce que vous recevez le lundi</h2>
+  <p>Un seul email : la sélection de la semaine. Pas de tableau de bord, pas d'application, pas d'alerte en temps réel.</p>
+  <ul>
+    <li>À décider, par date : les appels d'offres notés 70 ou plus, nouveaux ou déjà signalés, encore ouverts, la plus proche échéance d'abord.</li>
+    <li>À examiner : ceux notés de 40 à 69, en une ligne chacun, avec ce qui peut coincer.</li>
+    <li>Encore ouverts : ceux notés 70 ou plus qui viennent après ces échéances.</li>
+    <li>Non retenus : les autres, comptés et expliqués, ceux notés 15 à 39 en une ligne chacun.</li>
+  </ul>
+  <p>Pour chaque appel d'offres retenu : le résumé, les points clés (calendrier, certifications, lots, lieu), la note justifiée et le lien vers l'avis complet.</p>
+</section>
+
+<section id="source">
+  <h2>Une seule source</h2>
+  <p>Le BOAMP, rien d'autre. Il inclut les avis français qui paraissent aussi au Journal officiel de l'Union européenne (JOUE) en raison de leur montant. Je ne couvre ni les plateformes d'acheteurs, ni les marchés privés. Un appel d'offres absent du BOAMP n'apparaît pas dans votre sélection.</p>
 </section>
 
 <section id="note">
@@ -137,7 +151,7 @@ footer h2 { font-size: 1.05rem; }
 
 <section id="essai">
   <h2>L'essai</h2>
-  <p>14 jours gratuits, sans carte bancaire : aucun prélèvement possible, rien ne vous engage. L'essai démarre dès votre « ok » à mon email, ou dès votre message à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a>. Le jour même, un message de bienvenue dit ce que l'outil a compris de votre métier et de votre région, à corriger en une ligne. Votre première sélection suit dans la journée. Puis une nouvelle chaque lundi. Trois jours avant la fin, je vous demande si vous voulez continuer. Sinon, tout s'arrête tout seul à la fin des 14 jours, avec un dernier message de ma part.</p>
+  <p>Deux semaines gratuites, sans carte bancaire : aucun prélèvement possible, rien ne vous engage. L'essai démarre sur votre « ok », dans la journée, du lundi au vendredi. Un message de bienvenue dit ce que l'outil a compris de votre métier et de votre région, à corriger en une ligne. Votre première sélection suit. Puis une nouvelle chaque lundi. Trois jours avant la fin, je vous demande si vous voulez continuer. Sinon, tout s'arrête tout seul au bout des deux semaines, avec un dernier message de ma part.</p>
 </section>
 
 <section id="prix">
@@ -152,7 +166,7 @@ footer h2 { font-size: 1.05rem; }
 
 <section id="demarrer">
   <h2>Pour démarrer</h2>
-  <p>Si vous avez reçu un email de ma part, répondez « ok » : l'essai démarre le jour même. Pas d'email ? Écrivez-moi à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a> avec le nom de votre entreprise : je vous réponds vite.</p>
+  <p>Si vous avez reçu un email de ma part, répondez « ok » : l'essai démarre dans la journée, du lundi au vendredi. Pas d'email ? Écrivez-moi à <a href="mailto:armand@bonpli.fr">armand@bonpli.fr</a> avec le nom de votre entreprise : je vous réponds vite.</p>
 </section>
 </main>
 
